@@ -11,8 +11,7 @@ reddit = praw.Reddit(client_id = 'NCOlCOLOBEl5rQ' , client_secret = 'NghZywIWqMG
 subreddit = reddit.subreddit('wallpaper')
 
 
-new_wallpapers = subreddit.new(limit = 5)
-hot_wallpapers = subreddit.hot(limit = 5)
+
 counter = 1
 
 def downloader(url):
@@ -30,7 +29,10 @@ def downloader(url):
 
 
 while 'main loop runs forever' == 'main loop runs forever':
-
+    
+    new_wallpapers = subreddit.new(limit = 5)
+    hot_wallpapers = subreddit.hot(limit = 5)
+    
     for wallpaper in new_wallpapers:
         
             
